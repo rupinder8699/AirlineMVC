@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "AboutUs";
+    Layout = "~/HomePage.cshtml";
+}
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<h1>Airline Booking Site </h1>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Airline Booking</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href='@Url.Action("MainPage","Home")'>Home</a></li>
+            <li><a href='@Url.Action("AboutUs","Home")'>About us</a></li>
+            <li><a href='@Url.Action("PrivacyPolicy","Home")'>Privacy Policy</a></li>
+            <li><a href='@Url.Action("Contact","Contact")'>Contact</a></li>
+            <li><a href='@Url.Action("Login","Admin")'>Admin Login </a></li>
+
+
+        </ul>
+    </div>
+</nav>
+<div class="booking-form-w3layouts">
+    <!-- Form starts here -->
+
+    <h2 class="sub-heading-agileits">About US </h2>
+    <div class="main-flex-w3ls-sectns">
+
+
+
+        <div class="row" style="color:white;">
+            <div class="col-sm-4">
+                <b>Who are we?</b><br />
+                Airline booking site is your go-to site for flight tickets from New Zealand.
+
+                We’re a team of passionate, savvy travellers on a mission to make it easy for you to find the cheapest domestic and international flights in NZ.
+
+                As one of the world’s largest flight comparison websites, Airline booking is the starting point for your journey.
+            </div><br />
+            <div class="col-sm-4">
+                <b> How do we do it?</b><br />
+                Our innovative flight search, curated deals and inspirational content make it simple to find cheap flights from New Zealand to anywhere.
+
+                We partner with thousands of airlines and travel providers from New Zealand and the world, to bring you the cheapest flights.
+
+                We then link you directly to the airlines or travel agents to book your flight tickets and open up new travel possibilities to see the world on a budget.
+            </div><br />
+            <div class="col-sm-4">
+                <b>   Why come to us?</b><br />
+                Millions of Kiwi travellers rely on us for trusted advice and the best selection of cheap flights and travel deals. Our service is completely free - we will not charge you a dollar.
+
+                We have been serving up useful tips, destination information and travel inspiration since 1996.
+
+                We know New Zealand and we know the world. We combine experience with local knowledge and our global network of partners to create amazing travel moments that matter.
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+
+        <!-- type you contant Here-->>
+    </div>
+    <div>
+        <h2> <a href='@Url.Action("MainPage","Home")' style="font-size:20px;" class="btn btn-primary">Back to Index</a></h2>
+    </div>
+    <div class="clear"></div>
+
+
+    <!--// Form starts here -->
+</div>
+<!--copyright-->
+<div class="copyright">
+    <p>&copy; 2019. Airline Booking Form . All Rights Reserved | 			</p>
+</div>
+
+
+

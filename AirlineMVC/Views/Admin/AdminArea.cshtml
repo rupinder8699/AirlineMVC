@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "AdminArea";
+    Layout = "~/HomePage.cshtml";
+}
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<h1>Airline Booking Site </h1>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Airline Booking</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href='@Url.Action("MainPage","Home")'>Home</a></li>
+            <li><a href='@Url.Action("AboutUs","Home")'>About us</a></li>
+            <li><a href='@Url.Action("PrivacyPolicy","Home")'>Privacy Policy</a></li>
+            <li><a href='@Url.Action("Contact","Contact")'>Contact</a></li>
+            <li><a href='@Url.Action("Login","Admin")'>Admin Login </a></li>
+
+
+        </ul>
+    </div>
+</nav>
+<div class="booking-form-w3layouts">
+    <!-- Form starts here -->
+    <form action="verify" method="post">
+        <h2 class="sub-heading-agileits">Admin Area</h2>
+        <div class="main-flex-w3ls-sectns">
+
+            <h2>
+                <a href='@Url.Action("ViewPlane","Plane")' style="font-size:20px;" class="btn btn-primary">Plane Details </a>
+                <br/><br/>
+                <a href='@Url.Action("ConactData","ContactData")' style="font-size:20px;" class="btn btn-primary">Contact Details </a>
+
+            </h2>
+     
+
+
+        </div>
+        <div>
+            <h2> <a href='@Url.Action("Login","Admin")' style="font-size:20px;" class="btn btn-primary">Back to Login</a></h2>
+        </div>
+        <div class="clear"></div>
+
+    </form>
+    <!--// Form starts here -->
+</div>
+<!--copyright-->
+<div class="copyright">
+    <p>&copy; 2019. Airline Booking Form . All Rights Reserved |</p>
+</div>
+
+

@@ -1,0 +1,111 @@
+﻿@model IEnumerable<AirlineMVC.Models.tbContact>
+
+@{
+    ViewBag.Title = "ConactData";
+    Layout = "~/HomePage.cshtml";
+}
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<h1>Airline Booking Site </h1>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Airline Booking</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href='@Url.Action("MainPage","Home")'>Home</a></li>
+            <li><a href='@Url.Action("AboutUs","Home")'>About us</a></li>
+            <li><a href='@Url.Action("PrivacyPolicy","Home")'>Privacy Policy</a></li>
+            <li><a href='@Url.Action("Contact","Contact")'>Contact</a></li>
+            <li><a href='@Url.Action("Login","Admin")'>Admin Login </a></li>
+
+
+        </ul>
+    </div>
+</nav>
+<style>
+    table td, th {
+        border: 1px solid white;
+        padding: 20px;
+        color: white;
+    }
+</style>
+
+
+
+<div class="booking-form-w3layouts">
+    <!-- Form starts here -->
+    <h2 class="sub-heading-agileits">View All Contact </h2>
+    <div class="main-flex-w3ls-sectns">
+        <div class="field-agileinfo-spc form-w3-agile-text1">
+
+            <!--All planes are Viewed here here we get options to edit delete the planes-->
+
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Sname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Semail)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Smsg)
+                    </th>
+                    <th>Delete</th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sname)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Semail)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Smsg)
+                        </td>
+                        <td>
+                            <h2 class="btn btn-warning">  @Html.ActionLink("Delete", "Delete", new { id = item.ID })</h2>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+
+
+
+        </div>
+        <br />
+        <div class="field-agileinfo-spc form-w3-agile-text2">
+
+        </div>
+    </div>
+    <a href='@Url.Action("AdminArea","Admin")'>
+        <input id="btnLogin" type="submit" name="submit" value="Back to Admin Area" class="btn btn-primary" style="border:0px solid red;height:50px;width:200px;text-align:center;padding-left:10px;" />
+    </a>
+    <div class="clear"></div>
+
+    <!--// Form starts here -->
+</div>
+<!--copyright-->
+<div class="copyright">
+    <p>&copy; 2019. Airline Booking Form . All Rights Reserved | 			</p>
+</div>
+
+
+
+
+
+
+
+
+

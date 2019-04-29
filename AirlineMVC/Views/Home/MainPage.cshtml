@@ -1,0 +1,126 @@
+﻿@model IEnumerable<AirlineMVC.Models.tbPlane>
+
+@{
+    ViewBag.Title = "MainPage";
+    Layout = "~/HomePage.cshtml";
+}
+
+
+<style>
+    table td, th {
+        border: 1px solid white;
+        padding: 20px;
+        color: white;
+        text-align:center;
+    }
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<h1>Airline Booking Site </h1>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Airline Booking</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href='@Url.Action("MainPage","Home")'>Home</a></li>
+            <li><a href='@Url.Action("AboutUs","Home")'>About us</a></li>
+            <li><a href='@Url.Action("PrivacyPolicy","Home")'>Privacy Policy</a></li>
+            <li><a href='@Url.Action("Contact","Contact")'>Contact</a></li>
+            <li><a href='@Url.Action("Login","Admin")'>Admin Login </a></li>
+
+
+        </ul>
+    </div>
+</nav>
+<div class="booking-form-w3layouts">
+    <!-- Form starts here -->
+
+
+
+    <div class="main-flex-w3ls-sectns">
+
+        <img src="~/images/index.jpg" style="height:300px; width:900px;" />
+
+
+        <!-- type you contant Here-->
+    </div>
+
+    <br /><div style="color:white; font-size:20px;">
+    <h3>Welcome to Airline Booking Site Book Cheap Flights Here </h3><br />
+    <p>Why pay full price for your next flight when you can take advantage of cheap flights on Airline Booking Site ? We offer unbelievable savings on flights worldwide, so whether you’re looking for a weekend getaway or a once-in-a-lifetime trip around the globe, we can get you there for less. Even better: we update our discount airfares constantly, so you can find new deals on CheapOair every few seconds! On your next trip, don’t take your chances anywhere else. </p>
+    <center>
+
+        <h3> Our Upcomming Flights for Booking  </h3><br />
+
+        <table>
+            <thead>
+            <th>Plane No</th>
+            <th>Plane Name</th>
+            <th>destination</th>
+            <th>Arival</th>
+            <th>Price</th>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.PlaneNo</td>
+                        <td>@item.PlaneName</td>
+                        <td>@item.Destination</td>
+                        <td>@item.Departure</td>
+                        <td>@item.Price</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </center>
+
+
+
+
+
+
+
+</div><br />
+    <h2 style="text-align:center; color:red; font-size:30px;">About Airline Booking</h2>
+    <div class="row" style="color:white;">
+        <div class="col-sm-4">
+            <b>Who are we?</b><br />
+            Airline booking site is your go-to site for flight tickets from New Zealand.
+
+            We’re a team of passionate, savvy travellers on a mission to make it easy for you to find the cheapest domestic and international flights in NZ.
+
+            As one of the world’s largest flight comparison websites, Airline booking is the starting point for your journey.
+        </div><br />
+        <div class="col-sm-4">
+            <b> How do we do it?</b><br />
+            Our innovative flight search, curated deals and inspirational content make it simple to find cheap flights from New Zealand to anywhere.
+
+            We partner with thousands of airlines and travel providers from New Zealand and the world, to bring you the cheapest flights.
+
+            We then link you directly to the airlines or travel agents to book your flight tickets and open up new travel possibilities to see the world on a budget.
+        </div><br />
+        <div class="col-sm-4">
+            <b>   Why come to us?</b><br />
+            Millions of Kiwi travellers rely on us for trusted advice and the best selection of cheap flights and travel deals. Our service is completely free - we will not charge you a dollar.
+
+            We have been serving up useful tips, destination information and travel inspiration since 1996.
+
+            We know New Zealand and we know the world. We combine experience with local knowledge and our global network of partners to create amazing travel moments that matter.
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+
+    <!--// Form starts here -->
+</div>
+<!--copyright-->
+<div class="copyright">
+    <p>&copy; 2019. Airline Booking Form . All Rights Reserved | 			</p>
+</div>
+
+
